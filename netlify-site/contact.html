@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez l'Académie du Digital pour vos formations TikTok, Facebook, coaching et services de géolocalisation. Réponse rapide garantie.">
+    <title>Contact | Académie du Digital - Formations & Coaching</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){ emailjs.init("Y9zcJWnjzGoU7PMw7"); })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6896597569015809" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <h1>ACADÉMIE DU DIGITAL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact-intro">
+            <h2>Contactez-nous</h2>
+            <p>Une question sur nos formations TikTok, Facebook, ou nos services de coaching ? Nous sommes à votre écoute et vous répondons sous 24h.</p>
+        </section>
+
+        <div class="contact-container">
+            <!-- Coordonnées -->
+            <section id="contact-details">
+                <h3>📞 Nos coordonnées</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <strong>Email :</strong>
+                        <a href="mailto:lgeordans@gmail.com">lgeordans@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Téléphone/WhatsApp :</strong>
+                        <a href="https://wa.me/237653009123">+237 653 00 91 23</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Horaires :</strong>
+                        <span>Lun-Ven: 8h-18h | Sam: 9h-13h</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Formulaire de contact -->
+            <section id="contact-form">
+                <h3>📝 Envoyez-nous un message</h3>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Adresse email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service concerné *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Sélectionnez un service --</option>
+                            <option value="Formation TikTok Marketing">Formation TikTok</option>
+                            <option value="Formation Facebook Ads">Formation Facebook Ads</option>
+                            <option value="Formation Alibaba Import-Export">Formation Alibaba</option>
+                            <option value="Formation Intelligence Artificielle">Formation Intelligence Artificielle</option>
+                            <option value="Coach Sportif Personnel">Coach Sportif Personnel</option>
+                            <option value="Accompagnement Scolaire">Accompagnement Scolaire</option>
+                            <option value="Géolocalisation Google Maps">Géolocalisation Google Maps</option>
+                            <option value="Autre demande">Autre demande</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Votre message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Décrivez votre projet ou votre question..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="button">Envoyer le message</button>
+                </form>
+            </section>
+        </div>
+
+        <!-- Réseaux sociaux -->
+        <section class="social-links">
+            <h2>📱 Suivez-nous sur les réseaux</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61556916795134" target="_blank">Facebook</a>
+                <a href="https://wa.me/237653009123" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/lgeordans?igsh=NGdweXpmOWlocDVr" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@mr.geordans?_t=8nYsZsbMmJC&_r=1" target="_blank">TikTok</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Académie du Digital. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    // Récupérer le service sélectionné pour l'utiliser comme sujet
+                    const serviceSelect = document.getElementById('service');
+                    const selectedService = serviceSelect.options[serviceSelect.selectedIndex].text;
+                    
+                    // Créer un objet avec les données du formulaire
+                    const templateParams = {
+                        from_name: document.getElementById('name').value,
+                        from_email: document.getElementById('email').value,
+                        service: selectedService, // Ceci sera utilisé comme sujet
+                        message: document.getElementById('message').value,
+                        subject: selectedService // Ajout du sujet explicitement
+                    };
+                    
+                    // Envoyer l'email avec les paramètres complets
+                    emailjs.send('service_79ygaat', 'template_tf7pi3e', templateParams)
+                        .then(function() {
+                            alert('✅ Message envoyé ! Nous vous répondrons dans les plus brefs délais.');
+                            contactForm.reset();
+                        }, function(error) {
+                            alert('❌ Une erreur est survenue : ' + JSON.stringify(error));
+                        });
+                });
+            }
+            
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

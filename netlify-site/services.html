@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formations professionnelles : TikTok, Facebook Ads, Alibaba, IA, Coaching sportif, Accompagnement scolaire et Géolocalisation Google Maps.">
+    <title>Nos Services | Formations Digitales & Coaching - ACADÉMIE DU DIGITAL</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){ emailjs.init("Y9zcJWnjzGoU7PMw7"); })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6896597569015809" crossorigin="anonymous"></script>
+    <style>
+        /* Styles pour les modals */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 10% auto;
+            padding: 2rem;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #666;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        .service-form {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ACADÉMIE DU DIGITAL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="services-intro">
+            <h2>Nos Services Professionnels</h2>
+            <p>Découvrez nos formations expertes et nos accompagnements personnalisés pour booster vos compétences digitales et votre développement personnel.</p>
+        </section>
+
+        <!-- CATÉGORIE : FORMATIONS DIGITALES -->
+        <section class="service-category">
+            <h2>🎓 Formations Digitales</h2>
+            <div class="services-grid">
+                <article class="service">
+                    <h3>Formation TikTok Marketing</h3>
+                    <p>Maîtrisez l'algorithme TikTok, créez du contenu viral, développez votre audience et monétisez votre présence.</p>
+                    <ul>
+                        <li>Analyse de l'algorithme</li>
+                        <li>Création de contenu engageant</li>
+                        <li>Stratégies de monétisation</li>
+                        <li>Publicités TikTok Ads</li>
+                    </ul>
+                   <div class="options-achat">
+                        <p class="prix">💰 Prix : <span class="montant">25.000</span> FCFA</p>
+        
+                   <div class="paiement-mobile">
+                        <button onclick="afficherModalPaiement('formation-tiktok')" class="button">
+                             💰 Acheter cette formation
+                        </button>
+			            <small>Après paiement, vous recevrez le mot de passe d'accès par email</small>
+                    </div>
+                    </div>
+                    
+                    
+                    <div class="service-form" id="form-tiktok">
+                        <h4>Demander des informations</h4>
+                        <form class="commande-form">
+                            <input type="hidden" name="service" value="Formation TikTok Marketing">
+                            <div>
+                                <label for="nom-tiktok">Nom :</label>
+                                <input type="text" id="nom-tiktok" name="nom" required>
+                            </div>
+                            <div>
+                                <label for="email-tiktok">Email :</label>
+                                <input type="email" id="email-tiktok" name="email" required>
+                            </div>
+                            <div>
+                                <label for="message-tiktok">Message :</label>
+                                <textarea id="message-tiktok" name="message" rows="3" placeholder="Dites-nous vos objectifs..."></textarea>
+                            </div>
+                            <button type="submit" class="button small">Envoyer ma demande</button>
+                        </form>
+                    </div>
+                    <button class="button" onclick="toggleForm('form-tiktok')">Je m'inscris</button>
+                </article>
+
+                <article class="service">
+                    <h3>Formation Facebook Ads</h3>
+                    <p>Devenez expert en publicité Facebook. Apprenez à créer des campagnes rentables et à analyser vos performances.</p>
+                    <ul>
+                        <li>Création de campagnes</li>
+                        <li>Optimisation du budget</li>
+                        <li>Analyse des résultats</li>
+                        <li>Retour sur investissement</li>
+                    </ul>
+                    
+					 <div class="options-achat">
+                           <p class="prix">💰 Prix : <span class="montant">35.000</span> FCFA</p>
+        
+                         <div class="paiement-mobile">
+                               <button onclick="afficherModalPaiement('formation-facebook')" class="button">
+                                       💰 Acheter cette formation
+                                      </button>
+								<small>Après paiement, vous recevrez le mot de passe d'accès par email</small>	  
+                          </div>
+                      </div>
+                    <div class="service-form" id="form-facebook">
+                        <h4>Demander des informations</h4>
+                        <form class="commande-form">
+                            <input type="hidden" name="service" value="Formation Facebook Ads">
+                            <div>
+                                <label for="nom-facebook">Nom :</label>
+                                <input type="text" id="nom-facebook" name="nom" required>
+                            </div>
+                            <div>
+                                <label for="email-facebook">Email :</label>
+                                <input type="email" id="email-facebook" name="email" required>
+                            </div>
+                            <div>
+                                <label for="message-facebook">Message :</label>
+                                <textarea id="message-facebook" name="message" rows="3" placeholder="Dites-nous vos objectifs..."></textarea>
+                            </div>
+                            <button type="submit" class="button small">Envoyer ma demande</button>
+                        </form>
+                    </div>
+                    <button class="button" onclick="toggleForm('form-facebook')">Je m'inscris</button>
+                </article>
+
+                <article class="service">
+                    <h3>Formation Alibaba Import-Export</h3>
+                    <p>Apprenez à importer en toute sécurité depuis la Chine. Trouvez des fournisseurs fiables et gérez la logistique.</p>
+                    <ul>
+                        <li>Recherche de fournisseurs</li>
+                        <li>Négociation des prix</li>
+                        <li>Gestion logistique</li>
+                        <li>Contrôle qualité</li>
+                    </ul>
+                    
+					 
+                    <div class="service-form" id="form-alibaba">
+                        <h4>Demander des informations</h4>
+                        <form class="commande-form">
+                            <input type="hidden" name="service" value="Formation Alibaba Import-Export">
+                            <div>
+                                <label for="nom-alibaba">Nom :</label>
+                                <input type="text" id="nom-alibaba" name="nom" required>
+                            </div>
+                            <div>
+                                <label for="email-alibaba">Email :</label>
+                                <input type="email" id="email-alibaba" name="email" required>
+                            </div>
+                            <div>
+                                <label for="message-alibaba">Message :</label>
+                                <textarea id="message-alibaba" name="message" rows="3" placeholder="Dites-nous vos objectifs..."></textarea>
+                            </div>
+                            <button type="submit" class="button small">Envoyer ma demande</button>
+                        </form>
+                    </div>
+                    <button class="button" onclick="toggleForm('form-alibaba')">Je m'inscris</button>
+                </article>
+
+                <article class="service">
+                    <h3>Formation Intelligence Artificielle</h3>
+                    <p>Maîtrisez les outils d'IA pour automatiser vos tâches, booster votre productivité et créer du contenu innovant.</p>
+                    <ul>
+                        <li>Outils IA générative</li>
+                        <li>Automatisation des processus</li>
+                        <li>Création de contenu IA</li>
+                        <li>Intégration business</li>
+                    </ul>
+                    
+                    <div class="service-form" id="form-ia">
+                        <h4>Demander des informations</h4>
+                        <form class="commande-form">
+                            <input type="hidden" name="service" value="Formation Intelligence Artificielle">
+                            <div>
+                                <label for="nom-ia">Nom :</label>
+                                <input type="text" id="nom-ia" name="nom" required>
+                            </div>
+                            <div>
+                                <label for="email-ia">Email :</label>
+                                <input type="email" id="email-ia" name="email" required>
+                            </div>
+                            <div>
+                                <label for="message-ia">Message :</label>
+                                <textarea id="message-ia" name="message" rows="3" placeholder="Dites-nous vos objectifs..."></textarea>
+                            </div>
+                            <button type="submit" class="button small">Envoyer ma demande</button>
+                        </form>
+                    </div>
+                    <button class="button" onclick="toggleForm('form-ia')">Je m'inscris</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATÉGORIE : COACHING PERSONNEL -->
+        <section class="service-category">
+            <h2>💪 Coaching Personnel</h2>
+            <div class="services-grid">
+                <article class="service">
+                    <h3>Coach Sportif Personnel</h3>
+                    <p>Programmes d'entraînement sur mesure et accompagnement nutritionnel pour atteindre vos objectifs fitness.</p>
+                    <ul>
+                        <li>Programmes personnalisés</li>
+                        <li>Suivi nutritionnel</li>
+                        <li>Coaching à distance</li>
+                        <li>Objectifs spécifiques</li>
+                    </ul>
+                    
+					<div class="options-achat">
+        <p class="prix">💰 Prix : <span class="montant">10.000</span> FCFA</p>
+        
+        <div class="paiement-mobile">
+            <button onclick="afficherModalPaiement('coach-sportif')" class="button">
+                💰 Souscrire à ce service 
+            </button>
+			<small>Après paiement, vous recevrez le mot de passe d'accès par email</small>
+        </div>
+    </div>
+                    <div class="service-form" id="form-sport">
+                        <h4>Réserver une séance</h4>
+                        <form class="commande-form">
+                            <input type="hidden" name="service" value="Coach Sportif Personnel">
+                            <div>
+                                <label for="nom-sport">Nom :</label>
+                                <input type="text" id="nom-sport" name="nom" required>
+                            </div>
+                            <div>
+                                <label for="email-sport">Email :</label>
+                                <input type="email" id="email-sport" name="email" required>
+                            </div>
+                            <div>
+                                <label for="message-sport">Message :</label>
+                                <textarea id="message-sport" name="message" rows="3" placeholder="Décrivez vos objectifs sportifs..."></textarea>
+                            </div>
+                            <button type="submit" class="button small">Réserver maintenant</button>
+                        </form>
+                    </div>
+                    <button class="button" onclick="toggleForm('form-sport')">Réserver une séance</button>
+                </article>
+
+                <article class="service">
+                    <h3>Accompagnement Scolaire</h3>
+                    <p>Soutien scolaire personnalisé pour les élèves du secondaire et du supérieur dans toutes les matières principales.</p>
+                    <ul>
+                        <li>Soutien toutes matières</li>
+                        <li>Méthodologie d'apprentissage</li>
+                        <li>Préparation aux examens</li>
+                        <li>Gestion du stress</li>
+                    </ul>
+                    
+					<div class="options-achat">
+        <p class="prix">💰 Prix : <span class="montant">10.000</span> FCFA</p>
+        
+        <div class="paiement-mobile">
+            <button onclick="afficherModalPaiement('accompagnement-scolaire')" class="button">
+                💰 Souscrire à ce service 
+            </button>
+			<small>Après paiement, vous recevrez le mot de passe d'accès par email</small>
+        </div>
+    </div>
+                    <div class="service-form" id="form-scolaire">
+                        <h4>Demander un accompagnement</h4>
+                        <form class="commande-form">
+                            <input type="hidden" name="service" value="Accompagnement Scolaire">
+                            <div>
+                                <label for="nom-scolaire">Nom :</label>
+                                <input type="text" id="nom-scolaire" name="nom" required>
+                            </div>
+                            <div>
+                                <label for="email-scolaire">Email :</label>
+                                <input type="email" id="email-scolaire" name="email" required>
+                            </div>
+                            <div>
+                                <label for="niveau-scolaire">Niveau :</label>
+                                <input type="text" id="niveau-scolaire" name="niveau" placeholder="Ex: Terminale, Licence 2..." required>
+                            </div>
+                            <div>
+                                <label for="message-scolaire">Message :</label>
+                                <textarea id="message-scolaire" name="message" rows="3" placeholder="Matières concernées, difficultés..."></textarea>
+                            </div>
+                            <button type="submit" class="button small">Demander l'accompagnement</button>
+                        </form>
+                    </div>
+                    <button class="button" onclick="toggleForm('form-scolaire')">Demander un accompagnement</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- CATÉGORIE : SERVICES AUX ENTREPRISES -->
+        <section class="service-category">
+            <h2>🌐 Services aux Entreprises</h2>
+            <div class="services-grid">
+                <article class="service">
+                    <h3>Géolocalisation Google Maps</h3>
+                    <p>Augmentez votre visibilité locale avec un référencement optimisé sur Google Maps et Google Business Profile.</p>
+                    <ul>
+                        <li>Création de profil</li>
+                        <li>Optimisation SEO local</li>
+                        <li>Gestion des avis</li>
+                        <li>Augmentation de la visibilité</li>
+                    </ul>
+                    
+					<div class="options-achat">
+        <p class="prix">💰 Prix : <span class="montant">50.000</span> FCFA</p>
+        
+        <div class="paiement-mobile">
+            <button onclick="afficherModalPaiement('geolocalisation')" class="button">
+                💰 Souscrire à ce service 
+            </button>
+			<small>Après paiement, vous recevrez le mot de passe d'accès par email</small>
+        </div>
+    </div>
+                    <div class="service-form" id="form-maps">
+                        <h4>Demander un devis</h4>
+                        <form class="commande-form">
+                            <input type="hidden" name="service" value="Géolocalisation Google Maps">
+                            <div>
+                                <label for="nom-maps">Nom :</label>
+                                <input type="text" id="nom-maps" name="nom" required>
+                            </div>
+                            <div>
+                                <label for="email-maps">Email :</label>
+                                <input type="email" id="email-maps" name="email" required>
+                            </div>
+                            <div>
+                                <label for="entreprise-maps">Nom de l'entreprise :</label>
+                                <input type="text" id="entreprise-maps" name="entreprise" required>
+                            </div>
+                            <div>
+                                <label for="message-maps">Message :</label>
+                                <textarea id="message-maps" name="message" rows="3" placeholder="Besoin spécifique, localisation..."></textarea>
+                            </div>
+                            <button type="submit" class="button small">Demander un devis</button>
+                        </form>
+                    </div>
+                    <button class="button" onclick="toggleForm('form-maps')">Demander un devis</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="social-links">
+            <h2>Rejoignez-nous sur les réseaux</h2>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61556916795134" target="_blank">Facebook</a>
+                <a href="https://wa.me/237653009123" target="_blank">WhatsApp</a>
+                <a href="https://www.instagram.com/lgeordans?igsh=NGdweXpmOWlocDVr" target="_blank">Instagram</a>
+                <a href="https://www.tiktok.com/@mr.geordans?_t=8nYsZsbMmJC&_r=1" target="_blank">TikTok</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Académie du Digital. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Fonction pour afficher/masquer les formulaires
+        function toggleForm(formId) {
+            const form = document.getElementById(formId);
+            const allForms = document.querySelectorAll('.service-form');
+            
+            // Masquer tous les autres formulaires
+            allForms.forEach(f => {
+                if (f.id !== formId) {
+                    f.style.display = 'none';
+                }
+            });
+            
+            // Afficher/masquer le formulaire cliqué
+            if (form.style.display === 'block') {
+                form.style.display = 'none';
+            } else {
+                form.style.display = 'block';
+                form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+
+        // Gestion de l'envoi des formulaires
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('.commande-form');
+            
+            forms.forEach(form => {
+                form.addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    
+                    emailjs.sendForm('service_79ygaat', 'template_x0xy1dn', this)
+                        .then(function() {
+                            alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons rapidement.');
+                            form.reset();
+                            form.style.display = 'none';
+                        }, function(error) {
+                            alert('❌ Une erreur est survenue lors de l\'envoi : ' + JSON.stringify(error));
+                        });
+                });
+            });
+
+            document.body.classList.add('loaded');
+        });
+    </script>
+	<script src="paiement.js"></script>
+	<!-- Modal de Paiement -->
+<div id="modal-paiement" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="fermerModal()">&times;</span>
+        
+        <h3 id="modal-titre">Procéder au paiement</h3>
+        
+        <div class="info-service">
+            <p id="modal-description"></p>
+            <p class="prix-modal" id="modal-prix"></p>
+        </div>
+
+        <div class="options-paiement">
+            <!-- MTN Mobile Money -->
+            <div class option-paiement>
+                <h4>📱 MTN Mobile Money</h4>
+                <div class="info-numero">
+                    <p><strong>Numéro :</strong> <span id="numero-mtn">653 009 123</span></p>
+                    <p><strong>Nom :</strong> <span id="nom-mtn">ACADEMIE DIGITAL</span></p>
+                    <p><strong>Montant à envoyer :</strong> <span id="montant-mtn">25.000 FCFA</span></p>
+                </div>
+                <button onclick="copierNumero('mtn')" class="button small">
+                    📋 Copier le numéro
+                </button>
+            </div>
+
+            <!-- Orange Money -->
+            <div class="option-paiement">
+                <h4>🍊 Orange Money</h4>
+                <div class="info-numero">
+                    <p><strong>Numéro :</strong> <span id="numero-orange">699 864 842</span></p>
+                    <p><strong>Nom :</strong> <span id="nom-orange">ACADEMIE DIGITAL</span></p>
+                    <p><strong>Montant à envoyer :</strong> <span id="montant-orange">25.000 FCFA</span></p>
+                </div>
+                <button onclick="copierNumero('orange')" class="button small">
+                    📋 Copier le numéro
+                </button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h4>📋 Instructions après paiement :</h4>
+            <ol>
+                <li>Effectuez le transfert vers le numéro choisi</li>
+                <li>Prenez une <strong>screenshot</strong> de la confirmation</li>
+                <li>Envoyez-la sur <a href="https://wa.me/237653009123" target="_blank">WhatsApp</a></li>
+                <li>Vous recevrez <strong>immédiatement</strong> votre accès</li>
+            </ol>
+        </div>
+
+        <div class="confirmation">
+            <p>🔄 <strong>Service choisi :</strong> <span id="service-selectionne"></span></p>
+            <p>⏰ <strong>Délai d'activation :</strong> Max 15 minutes après confirmation</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

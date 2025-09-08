@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accès Membres - ACADÉMIE DU DIGITAL</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .acces-membre {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .password-input {
+            width: 100%;
+            padding: 12px;
+            margin: 1rem 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        .contenu-membre {
+            display: none;
+            margin-top: 2rem;
+            text-align: left;
+        }
+        
+        .video-membre {
+            margin: 1rem 0;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        
+        .message-erreur {
+            color: red;
+            display: none;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ACADÉMIE DU DIGITAL</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="acces-membres.html">Espace Membre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="acces-membre">
+            <h2>🚀 Accès à la Formation TikTok Premium</h2>
+            <p>Entrez le mot de passe reçu après votre achat :</p>
+            
+            <input type="password" id="password-input" class="password-input" 
+                   placeholder="Votre mot de passe d'accès">
+            
+            <button onclick="verifierAcces()" class="button">
+                🔓 Accéder à la formation
+            </button>
+            
+            <div id="message-erreur" class="message-erreur">
+                ❌ Mot de passe incorrect. Vérifiez votre email ou contactez-nous.
+            </div>
+            
+            <p><small>Problème d'accès ? <a href="https://wa.me/237653009123">Contactez-nous sur WhatsApp</a></small></p>
+
+            <!-- CONTENU CACHÉ - visible seulement après mot de passe -->
+            <div id="contenu-membre" class="contenu-membre">
+                <div class="confirmation-succes">
+                    <h3>✅ Accès Réussi !</h3>
+                    <p>Bienvenue dans votre formation TikTok Premium</p>
+                </div>
+                
+                <h3>🎯 Formation TikTok Complète</h3>
+                
+                <div class="video-membre">
+                    <h4>Module 1 : Les Bases</h4>
+                    <div class="video-container">
+                        <video controls width="100%">
+                            <source src="formations/les-fonctionnalités-InShot.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                    <a href="formations/les-fonctionnalités-InShot.mp4" download class="button small">
+                        📥 Télécharger cette vidéo
+                    </a>
+                </div>
+                
+                <div class="video-membre">
+                    <h4>Module 2 : L'Algorithme</h4>
+                    <div class="video-container">
+                        <video controls width="100%">
+                            <source src="formations/module2-algorithme.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la vidéo.
+                        </video>
+                    </div>
+                    <a href="formations/module2-algorithme.mp4" download class="button small">
+                        📥 Télécharger cette vidéo
+                    </a>
+                </div>
+                
+                <div class="video-membre">
+                    <h4>📚 Ressources Complémentaires</h4>
+                    <ul>
+                        <li><a href="formations/guide-tiktok-pro.pdf" download>📄 Guide TikTok Pro (PDF)</a></li>
+                        <li><a href="formations/templates-contenu.zip" download>🎨 Templates de contenu (ZIP)</a></li>
+                        <li><a href="formations/checklist-viral.pdf" download>✅ Checklist de viralité (PDF)</a></li>
+                    </ul>
+                </div>
+                
+                <div class="support">
+                    <h4>💡 Besoin d'aide ?</h4>
+                    <p>Contactez-nous sur <a href="https://wa.me/237653009123">WhatsApp</a> pour un support personnalisé.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 - Académie du Digital. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // ==================== CONFIGURATION ====================
+        // MOTS DE PASSE VALIDES - AJOUTEZ LES ICI
+        const MOTS_DE_PASSE_VALIDES = [
+            "TikTokPro-Client1-2024",  // Mot de passe pour le client 1
+            "TikTokPro-Client2-2024",  // Mot de passe pour le client 2  
+            "FormationTikTok-25000",   // Mot de passe général
+            "Geordans2024!",            // Autre mot de passe
+            "DIGITAL2024!",
+            "TIKTOKPRO@123",
+            "FACEBOOKADS#456",
+            "ALIBABA789$",
+            "IAPOWER&ABC",
+            "COACHSPORT*2024",
+            "ETUDIANTS+SUCCESS03",
+            "GOOGLEMAPS^PRO",
+            "FORMATION%ELITE",
+            "ACADEMIE*DIGITAL"
+			// AJOUTEZ D'AUTRES MOTS DE PASSE ICI
+        ];
+        // ======================================================
+        
+        function verifierAcces() {
+            const password = document.getElementById('password-input').value;
+            const contenuMembre = document.getElementById('contenu-membre');
+            const messageErreur = document.getElementById('message-erreur');
+            
+            // Vérifier si le mot de passe est dans la liste
+            if (MOTS_DE_PASSE_VALIDES.includes(password)) {
+                // ACCÈS AUTORISÉ
+                contenuMembre.style.display = 'block';
+                messageErreur.style.display = 'none';
+                
+                // Cacher le formulaire de mot de passe
+                document.querySelector('button').style.display = 'none';
+                document.getElementById('password-input').style.display = 'none';
+                
+            } else {
+                // ACCÈS REFUSÉ
+                messageErreur.style.display = 'block';
+                contenuMembre.style.display = 'none';
+            }
+        }
+        
+        // Entrée sur le champ password
+        document.getElementById('password-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                verifierAcces();
+            }
+        });
+        
+        // Message de bienvenue
+        console.log("Page d'accès membre chargée - Prête à vérifier les mots de passe");
+    </script>
+</body>
+</html>
